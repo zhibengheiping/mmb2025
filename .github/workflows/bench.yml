@@ -1,0 +1,36 @@
+name: ci
+
+on:
+  push:
+    branches:
+    - main
+
+permissions:
+  deployments: write
+  contents: write
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: erlangsters/setup-erlang@v1
+      with:
+        erlang-version: 26
+        install-rebar3: true
+
+    - uses: hustcer/setup-moonbit@v1
+
+    - uses: actions/checkout@v4
+
+    - run: ./check.sh
+
+    - run: python3 bench.py
+    
+    - name: Store benchmark result
+      uses: benchmark-action/github-action-benchmark@v1
+      with:
+        name: MiniMoonbit2025 Benchmark
+        tool: 'customBiggerIsBetter'
+        output-file-path: output.txt
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        auto-push: true

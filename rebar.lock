@@ -1,0 +1,4 @@
+[{<<"brlex">>,
+  {git,"https://github.com/zhibengheiping/brlex.git",
+       {ref,"7f6c324740d1959c4b1f7e531dff5a1e434d985e"}},
+  0}].

@@ -1,0 +1,13 @@
+{application, mmb,
+ [{description, "MiniMoonBit"},
+  {vsn, "2025"},
+  {registered, []},
+  {applications,
+   [kernel,
+    stdlib
+   ]},
+  {included_applications, []},
+  {env,[]},
+  {modules, []},
+  {licenses, ["AGPL-3.0-only"]}
+ ]}.

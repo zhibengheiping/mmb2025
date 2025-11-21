@@ -1,0 +1,8 @@
+{
+  "link": {
+    "native": {
+      "cc": "clang",
+    }
+  },
+  "native-stub": ["rt.c"]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "bench",
+  "version": "0.1.0",
+  "license": "Proprietary",
+  "description": "",
+  "source": "bench",
+  "preferred-target": "native",
+  "link": {
+    "native": {
+      "cc": "clang",
+    }
+  },
+  "native-stub": ["rt.c"]
+}
